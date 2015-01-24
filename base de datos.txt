@@ -1,0 +1,2 @@
+db = web.database(dbn="mysql", user="usr tapw", pw="password")
+select = db.query(select * from alumnos)
