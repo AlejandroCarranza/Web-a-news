@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>WEB-A-NEWS</title>
+		<link rel="stylesheet" href="static/css/normalize.css">
+		<link rel="stylesheet" href="static/css/estilos.css">
+	</head>
+	<body>
+		<header class="main_header">
+			<figure class="logo">
+					<img src="static/imagenes/logo.png" alt="Web-A-News">
+			</figure>
+			<h1>WEB-A-<span class="news">NEWS</span></h1>
+			<p class="slogan">La fuente de noticias diaria</p>
+		</header>
+		<nav>
+			<a class="menu_boton">
+				<div class="barra">==</div>
+			</a>
+			<ul class="menu">
+				<li><a href="#">Sección</a></li>
+				<li><a href="#">Sección</a></li>
+				<li><a href="#">Sección</a></li>
+				<li><a href="#">Sección</a></li>
+				<li><a href="#">Sección</a></li>
+				<li><a href="#">Sección</a></li>
+				<li><a href="#">Sección</a></li>
+			</ul>
+		</nav>
+		<section class="noticias">
+		<h2 class="titulo">Título de la Sección</h2>
+		<div class="ultima_hora">Ultima hora</div>
+		<p class="noticias_recientes">Noticias más recientes</p>
+			<article class="noticia">
+				<h3 class="titulo">Presentando el nuevo auto de Masseratti</h3>
+				<figure>
+					<img src="static/imagenes/article-img.jpg" alt="Nuevo auto">
+					<figcaption>5 de septiembre 2014</figcaption>
+				</figure>
+				<div class="contenido">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi soluta sed tenetur consequuntur iure. Sequi accusantium ullam corporis, voluptatem eaque, expedita impedit suscipit esse eligendi sit, dolore magni et quia!
+				</div>
+				<p class="autor">Autor: Fernando Gonzalez</p>
+				<a class="leer_mas">Leer más...</a>
+			</article>
+		</section>
+		<footer>
+			<div class="clase">Topicos Avanzados de programación web</div>
+			<div class="copyright">(c) Fernando Alonso Tapia Gonzalez</div>
+            </footer>
+            <script id="tplNews" type="text/x-handlebars-template">
+                <article class="noticia" id={{id}}>
+                    
+                </article>
+                </script>
+                <script id="single-news" type="text/x-handlebars-template">
+                    <article class="noticia">
+            <h3 class="titulo">{{title}}</h3>
+            <figure>
+            <img src="{{image}}" alt="{{title}}">
+            <figcaption>{{date}}</figcaption>
+            </figure>
+            <div class="contenido">{{summary}}</div>
+            <p class="autor">Autor: {{author}}</p>
+            <a class="leer_mas" id="{{id}}">Leer más</a>
+            </article>
+        </script>
+        <script id="fullNew" type="text/x-handlebars-template">
+            <h3 class="titulo">{{title}}</h3>
+            <figure>
+                <img src="{{image}}" alt="{{title}}">
+                <figcaption>{{date}}</figcaption>
+            </figure>
+            <dif class="contenido">{{content}}</div>
+        <p class="autor">Autor: {{author}}</p>
+        <a id="return" href="">Regresar</a>
+        </script>
+        <script src="static/js/lib/jquery.min.js"></script>
+        <script src="static/js/lib/underscore-min.js"></script>
+        <script src="static/js/lib/backbone-min.js"></script>
+        <script src="static/js/lib/handlebars-v2.0.0.js"></script>
+        <script src="static/js/app.js"></script>
+
+        <script src="static/js/models/news.js"></script>
+        <script src="static/js/views/single_news.js"></script>
+        <script src="static/js/views/news.js"></script>
+        <script src="static/js/views/content-notice.js"></script>
+        <script src="static/js/collections/news.js"></script>
+        <script src="static/js/routers/news.js"></script>
+
+</body>
+
+</html>
